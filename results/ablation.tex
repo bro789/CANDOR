@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\caption{Component analysis on the validation seed of \bench{} (OmniSQL-7B, Qwen2.5-7B verifier unless stated). P/R: precision and recall of the variants accepted at selection sites against the ground-truth classes. Calls: LLM calls per question.}
+\label{tab:ablation}
+\small
+\setlength{\tabcolsep}{3.2pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Variant & EX & Aff. & Unaff. & P & R & Calls\\
+\midrule
+\sys{} (full) & 61.4 & 56.4 & 63.2 & 0.84 & 0.89 & 4.5 \\
+\multicolumn{7}{l}{\emph{(a) verifier formulation}} \\
+Pairwise yes/no & 56.4 & 42.4 & 61.3 & 0.51 & 0.89 & 4.3 \\
+Selection w/o bidirectional test & 60.2 & 53.6 & 62.5 & 0.70 & 0.91 & 4.3 \\
+\sys{} $+$ in-domain distractors & 60.1 & 51.1 & 63.3 & 0.86 & 0.85 & 4.6 \\
+\multicolumn{7}{l}{\emph{(b) components removed}} \\
+$-$ statistics rules & 61.2 & 55.9 & 63.1 & 0.83 & 0.88 & 5.5 \\
+$-$ similarity exception of the frequency prior & 61.4 & 56.4 & 63.2 & 0.84 & 0.89 & 4.5 \\
+$-$ LLM query expansion & 61.3 & 55.9 & 63.2 & 0.84 & 0.88 & 4.1 \\
+$-$ wrapped sites & 61.2 & 55.6 & 63.2 & 0.85 & 0.89 & 4.5 \\
+$-$ small-domain enumeration & 61.4 & 56.4 & 63.2 & 0.83 & 0.89 & 3.7 \\
+$-$ query-driven restriction & 61.5 & 56.6 & 63.2 & 0.84 & 0.89 & 5.8 \\
+\multicolumn{7}{l}{\emph{(c) sensitivity}} \\
+$\tau=0.3$ / $0.7$ / $0.9$ & 61.4 / 61.4 / 61.2 & & & & & \\
+Verifier Qwen3-4B & 58.1 & 45.6 & 62.6 & 0.94 & 0.82 & 4.4 \\
+Verifier Qwen2.5-32B-AWQ & 61.0 & 54.4 & 63.3 & 0.92 & 0.88 & 4.5 \\
+\bottomrule
+\end{tabular}}
+\end{table}

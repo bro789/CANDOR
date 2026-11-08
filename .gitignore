@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+runs/
+data/bird/
+data/bird_dirty/
+data/truth_clean.pkl
+third_party/
+figs/
+fonts/

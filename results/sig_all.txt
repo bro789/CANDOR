@@ -1,0 +1,77 @@
+main_r20_s2 omni7b   vs none              60.82 -  47.39 = +13.43 CI[+11.67,+15.19] W/L 213/7 p=5.51e-54
+main_r20_s2 omni7b   vs like              60.82 -  56.00 =  +4.82 CI[+3.65,+6.06] W/L 85/11 p=2.55e-15
+main_r20_s2 omni7b   vs norm              60.82 -  57.76 =  +3.06 CI[+2.15,+4.04] W/L 51/4 p=2.05e-11  <- strongest
+main_r20_s2 omni7b   vs fuzzy             60.82 -  54.82 =  +6.00 CI[+4.63,+7.37] W/L 109/17 p=1.28e-17
+main_r20_s2 qwen7b   vs none              44.00 -  35.66 =  +8.34 CI[+6.91,+9.84] W/L 133/5 p=2.31e-33
+main_r20_s2 qwen7b   vs like              44.00 -  40.48 =  +3.52 CI[+2.54,+4.56] W/L 58/4 p=2.59e-13
+main_r20_s2 qwen7b   vs norm              44.00 -  42.57 =  +1.43 CI[+0.78,+2.15] W/L 25/3 p=2.74e-05  <- strongest
+main_r20_s2 qwen7b   vs fuzzy             44.00 -  39.24 =  +4.76 CI[+3.59,+6.00] W/L 86/13 p=2.29e-14
+main_r20_s2 qwen32   vs none              57.69 -  45.57 = +12.13 CI[+10.50,+13.82] W/L 191/5 p=4.68e-50
+main_r20_s2 qwen32   vs like              57.69 -  53.13 =  +4.56 CI[+3.46,+5.74] W/L 77/7 p=5.14e-16
+main_r20_s2 qwen32   vs norm              57.69 -  55.41 =  +2.28 CI[+1.50,+3.13] W/L 39/4 p=3.11e-08  <- strongest
+main_r20_s2 qwen32   vs fuzzy             57.69 -  52.09 =  +5.61 CI[+4.30,+6.91] W/L 98/12 p=6.16e-18
+main_r20_s2 omni14b  vs none              61.86 -  48.24 = +13.62 CI[+11.86,+15.45] W/L 215/6 p=9.22e-56
+main_r20_s2 omni14b  vs like              61.86 -  57.04 =  +4.82 CI[+3.65,+6.06] W/L 84/10 p=1.03e-15
+main_r20_s2 omni14b  vs norm              61.86 -  59.45 =  +2.41 CI[+1.63,+3.26] W/L 40/3 p=3.02e-09  <- strongest
+main_r20_s2 omni14b  vs fuzzy             61.86 -  55.28 =  +6.58 CI[+5.15,+8.02] W/L 117/16 p=3.80e-20
+main_r20_s2 llama8   vs none              39.24 -  31.68 =  +7.56 CI[+6.26,+8.93] W/L 119/3 p=1.14e-31
+main_r20_s2 llama8   vs like              39.24 -  36.77 =  +2.48 CI[+1.63,+3.32] W/L 42/4 p=5.10e-09
+main_r20_s2 llama8   vs norm              39.24 -  38.01 =  +1.24 CI[+0.59,+1.89] W/L 22/3 p=1.57e-04  <- strongest
+main_r20_s2 llama8   vs fuzzy             39.24 -  35.66 =  +3.59 CI[+2.54,+4.69] W/L 65/10 p=5.15e-11
+main_r20_s3 omni7b   vs none              60.69 -  46.15 = +14.54 CI[+12.71,+16.36] W/L 230/7 p=7.12e-59
+main_r20_s3 omni7b   vs like              60.69 -  54.63 =  +6.06 CI[+4.82,+7.37] W/L 100/7 p=3.45e-22
+main_r20_s3 omni7b   vs norm              60.69 -  56.06 =  +4.63 CI[+3.59,+5.74] W/L 74/3 p=1.01e-18
+main_r20_s3 omni7b   vs fuzzy             60.69 -  54.37 =  +6.32 CI[+4.82,+7.89] W/L 124/27 p=4.69e-16
+main_r20_s3 omni7b   vs repair_q7         60.69 -  47.65 = +13.04 CI[+11.08,+14.99] W/L 230/30 p=2.31e-39
+main_r20_s3 omni7b   vs repair_q32        60.69 -  54.11 =  +6.58 CI[+4.89,+8.28] W/L 143/42 p=4.36e-14
+main_r20_s3 omni7b   vs eagerv4_q7        60.69 -  53.32 =  +7.37 CI[+5.80,+9.00] W/L 139/26 p=7.33e-20
+main_r20_s3 omni7b   vs eagerv4_norm_q7   60.69 -  57.69 =  +3.00 CI[+1.76,+4.30] W/L 72/26 p=3.69e-06  <- strongest
+main_r20_s3 qwen7b   vs none              43.29 -  34.22 =  +9.06 CI[+7.56,+10.63] W/L 146/7 p=6.23e-35
+main_r20_s3 qwen7b   vs like              43.29 -  38.92 =  +4.37 CI[+3.32,+5.48] W/L 71/4 p=6.81e-17
+main_r20_s3 qwen7b   vs norm              43.29 -  40.55 =  +2.74 CI[+1.89,+3.65] W/L 45/3 p=1.31e-10
+main_r20_s3 qwen7b   vs fuzzy             43.29 -  38.33 =  +4.95 CI[+3.65,+6.32] W/L 94/18 p=1.34e-13
+main_r20_s3 qwen7b   vs repair_q7         43.29 -  33.38 =  +9.91 CI[+8.34,+11.54] W/L 165/13 p=1.04e-34
+main_r20_s3 qwen7b   vs repair_q32        43.29 -  38.20 =  +5.08 CI[+3.65,+6.58] W/L 108/30 p=1.55e-11
+main_r20_s3 qwen7b   vs eagerv4_q7        43.29 -  37.61 =  +5.67 CI[+3.91,+7.50] W/L 141/54 p=3.77e-10
+main_r20_s3 qwen7b   vs eagerv4_norm_q7   43.29 -  41.00 =  +2.28 CI[+0.72,+3.85] W/L 93/58 p=5.48e-03  <- strongest
+main_r20_s3 qwen32   vs none              56.98 -  44.26 = +12.71 CI[+11.02,+14.47] W/L 201/6 p=1.02e-51
+main_r20_s3 qwen32   vs like              56.98 -  51.50 =  +5.48 CI[+4.30,+6.71] W/L 90/6 p=2.50e-20
+main_r20_s3 qwen32   vs norm              56.98 -  53.78 =  +3.19 CI[+2.28,+4.17] W/L 53/4 p=5.91e-12
+main_r20_s3 qwen32   vs fuzzy             56.98 -  51.56 =  +5.41 CI[+3.98,+6.91] W/L 110/27 p=4.38e-13
+main_r20_s3 qwen32   vs repair_q7         56.98 -  44.85 = +12.13 CI[+10.30,+14.02] W/L 210/24 p=2.82e-38
+main_r20_s3 qwen32   vs eagerv4_q7        56.98 -  50.39 =  +6.58 CI[+5.15,+8.08] W/L 122/21 p=1.65e-18
+main_r20_s3 qwen32   vs eagerv4_norm_q7   56.98 -  54.69 =  +2.28 CI[+1.17,+3.46] W/L 58/23 p=1.27e-04  <- strongest
+main_r20_s3 omni14b  vs none              60.63 -  47.07 = +13.56 CI[+11.86,+15.38] W/L 215/7 p=1.47e-54
+main_r20_s3 omni14b  vs like              60.63 -  54.82 =  +5.80 CI[+4.56,+7.11] W/L 96/7 p=4.21e-21
+main_r20_s3 omni14b  vs norm              60.63 -  56.71 =  +3.91 CI[+2.93,+4.95] W/L 63/3 p=1.30e-15
+main_r20_s3 omni14b  vs fuzzy             60.63 -  54.24 =  +6.39 CI[+4.89,+7.95] W/L 126/28 p=4.78e-16
+main_r20_s3 omni14b  vs repair_q7         60.63 -  47.39 = +13.23 CI[+11.34,+15.19] W/L 231/28 p=6.61e-41
+main_r20_s3 omni14b  vs eagerv4_q7        60.63 -  52.35 =  +8.28 CI[+6.65,+9.97] W/L 153/26 p=4.32e-23
+main_r20_s3 omni14b  vs eagerv4_norm_q7   60.63 -  57.04 =  +3.59 CI[+2.28,+4.95] W/L 82/27 p=1.26e-07  <- strongest
+main_r20_s3 llama8   vs none              40.22 -  31.62 =  +8.60 CI[+7.24,+10.10] W/L 135/3 p=2.51e-36
+main_r20_s3 llama8   vs like              40.22 -  36.77 =  +3.46 CI[+2.48,+4.50] W/L 58/5 p=1.66e-12
+main_r20_s3 llama8   vs norm              40.22 -  37.87 =  +2.35 CI[+1.63,+3.13] W/L 37/1 p=2.84e-10
+main_r20_s3 llama8   vs fuzzy             40.22 -  36.31 =  +3.91 CI[+2.67,+5.22] W/L 81/21 p=1.71e-09
+main_r20_s3 llama8   vs repair_q7         40.22 -  32.59 =  +7.63 CI[+6.13,+9.19] W/L 136/19 p=5.46e-23
+main_r20_s3 llama8   vs eagerv4_q7        40.22 -  35.14 =  +5.08 CI[+3.19,+7.04] W/L 153/75 p=2.63e-07
+main_r20_s3 llama8   vs eagerv4_norm_q7   40.22 -  38.27 =  +1.96 CI[+0.13,+3.78] W/L 115/85 p=4.00e-02  <- strongest
+main_r20_s4 omni7b   vs none              62.06 -  48.37 = +13.69 CI[+11.93,+15.45] W/L 216/6 p=4.74e-56
+main_r20_s4 omni7b   vs like              62.06 -  56.39 =  +5.67 CI[+4.43,+6.98] W/L 96/9 p=1.63e-19
+main_r20_s4 omni7b   vs norm              62.06 -  57.76 =  +4.30 CI[+3.19,+5.48] W/L 73/7 p=5.80e-15  <- strongest
+main_r20_s4 omni7b   vs fuzzy             62.06 -  54.50 =  +7.56 CI[+6.06,+9.06] W/L 135/19 p=9.60e-23
+main_r20_s4 qwen7b   vs none              44.85 -  36.90 =  +7.95 CI[+6.52,+9.39] W/L 127/5 p=1.18e-31
+main_r20_s4 qwen7b   vs like              44.85 -  41.53 =  +3.32 CI[+2.35,+4.30] W/L 57/6 p=1.64e-11
+main_r20_s4 qwen7b   vs norm              44.85 -  42.50 =  +2.35 CI[+1.50,+3.26] W/L 42/6 p=1.01e-07  <- strongest
+main_r20_s4 qwen7b   vs fuzzy             44.85 -  39.57 =  +5.28 CI[+4.04,+6.58] W/L 94/13 p=2.58e-16
+main_r20_s4 qwen32   vs none              58.74 -  47.07 = +11.67 CI[+10.04,+13.30] W/L 184/5 p=4.99e-48
+main_r20_s4 qwen32   vs like              58.74 -  53.39 =  +5.35 CI[+4.17,+6.52] W/L 87/5 p=2.10e-20
+main_r20_s4 qwen32   vs norm              58.74 -  55.22 =  +3.52 CI[+2.54,+4.56] W/L 59/5 p=9.00e-13  <- strongest
+main_r20_s4 qwen32   vs fuzzy             58.74 -  51.89 =  +6.84 CI[+5.41,+8.28] W/L 120/15 p=1.61e-21
+main_r20_s4 omni14b  vs none              62.39 -  49.48 = +12.91 CI[+11.21,+14.67] W/L 204/6 p=1.39e-52
+main_r20_s4 omni14b  vs like              62.39 -  57.04 =  +5.35 CI[+4.17,+6.58] W/L 90/8 p=1.09e-18
+main_r20_s4 omni14b  vs norm              62.39 -  58.54 =  +3.85 CI[+2.80,+4.95] W/L 65/6 p=1.33e-13  <- strongest
+main_r20_s4 omni14b  vs fuzzy             62.39 -  54.56 =  +7.82 CI[+6.32,+9.39] W/L 138/18 p=4.24e-24
+main_r20_s4 llama8   vs none              39.83 -  32.92 =  +6.91 CI[+5.61,+8.21] W/L 108/2 p=9.41e-30
+main_r20_s4 llama8   vs like              39.83 -  36.77 =  +3.06 CI[+2.15,+3.98] W/L 50/3 p=5.52e-12
+main_r20_s4 llama8   vs norm              39.83 -  37.81 =  +2.02 CI[+1.24,+2.80] W/L 35/4 p=3.35e-07  <- strongest
+main_r20_s4 llama8   vs fuzzy             39.83 -  35.59 =  +4.24 CI[+3.06,+5.48] W/L 78/13 p=1.85e-12

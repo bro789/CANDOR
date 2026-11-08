@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\caption{Robustness with gold SQL (no generator errors) on held-out seed 4: EX (\%) on the affected questions per variant type, and EX on the unaffected questions for Fuzzy and \sys{}.}
+\label{tab:robust}
+\small
+\setlength{\tabcolsep}{2.6pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & & \multicolumn{5}{c}{Affected EX} & \multicolumn{2}{c}{Unaff.\ EX}\\
+\cmidrule(lr){3-7} \cmidrule(lr){8-9}
+Configuration & \#Aff & Norm & LIKE & Fuzzy & \sys{} & Oracle & Fuzzy & \sys{}\\
+\midrule
+\multicolumn{9}{l}{\emph{one variant type} ($r=0.2$)} \\
+Case & 419 & \textbf{90.9} & 81.9 & 74.7 & 88.8 & 91.6 & 90.6 & 98.8 \\
+Punctuation / spacing & 373 & \textbf{97.9} & 69.2 & 79.1 & 95.7 & 98.1 & 91.3 & 99.3 \\
+Typo & 240 & 0.0 & 8.8 & \textbf{57.9} & 45.4 & 96.7 & 89.9 & 98.8 \\
+Abbreviation & 38 & 0.0 & 0.0 & 60.5 & \textbf{65.8} & 89.5 & 88.4 & 98.5 \\
+Code / alias & 108 & 0.0 & 28.7 & 30.6 & \textbf{60.2} & 91.7 & 89.2 & 98.5 \\
+\multicolumn{9}{l}{\emph{all types} ($r=0.2$)} \\
+All types & 378 & 57.4 & 48.9 & 60.6 & \textbf{79.4} & 95.2 & 90.6 & 99.1 \\
+\bottomrule
+\end{tabular}}
+\end{table}

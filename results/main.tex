@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering
+\caption{Execution accuracy (\%) on \bench{} (held-out seed 3, $r=0.2$) under clean-answer semantics: all 1{,}534 questions (EX), the 426 affected questions (Aff.) and the unaffected ones (Unaff.). Clean EX: the same method on the original BIRD databases. Bold: best non-oracle. --: not run.}
+\label{tab:main}
+\small
+\setlength{\tabcolsep}{3.5pt}
+
+\begin{tabular}{lrrrrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{OmniSQL-7B (dirty)} & \multicolumn{3}{c}{Qwen2.5-7B (dirty)} & \multicolumn{3}{c}{Qwen2.5-32B (dirty)} & \multicolumn{3}{c}{Clean EX}\\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+Method & EX & Aff. & Unaff. & EX & Aff. & Unaff. & EX & Aff. & Unaff. & O-7B & Q-7B & Q-32B\\
+\midrule
+No rewrite & 46.2 & 1.6 & 63.3 & 34.2 & 2.6 & 46.4 & 44.3 & 2.8 & 60.2 & 64.1 & 46.3 & 60.8 \\
+LIKE substring & 54.6 & 33.8 & 62.6 & 38.9 & 20.7 & 45.9 & 51.5 & 31.2 & 59.3 & 62.7 & 44.7 & 58.8 \\
+Norm & 56.1 & 36.6 & 63.5 & 40.5 & 24.4 & 46.8 & 53.8 & 35.7 & \textbf{60.7} & 64.4 & 46.3 & 61.0 \\
+Fuzzy & 54.4 & 43.7 & 58.5 & 38.3 & 27.2 & 42.6 & 51.6 & 40.6 & 55.8 & 57.6 & 40.9 & 54.3 \\
+\midrule
+LLM-Repair (7B) & 47.7 & 33.8 & 53.0 & 33.4 & 19.0 & 38.9 & 44.9 & 30.8 & 50.3 & -- & -- & -- \\
+LLM-Repair (32B) & 54.1 & 48.4 & 56.3 & 38.2 & 29.6 & 41.5 & -- & -- & -- & -- & -- & -- \\
+Eager cleaning (7B) & 53.3 & 28.4 & 62.9 & 37.6 & 19.2 & 44.7 & 50.4 & 25.6 & 59.9 & -- & -- & -- \\
+\quad $+$ query-time Norm & 57.7 & 43.0 & 63.4 & 41.0 & 30.8 & 44.9 & 54.7 & 39.7 & 60.5 & -- & -- & -- \\
+\midrule
+\sys{} (7B verifier) & \textbf{60.7} & \textbf{51.9} & 64.1 & 43.3 & \textbf{33.8} & 46.9 & \textbf{57.0} & \textbf{47.4} & 60.6 & 64.9 & 46.4 & 60.8 \\
+\sys{} (32B verifier) & \textbf{60.7} & 51.6 & \textbf{64.2} & \textbf{43.5} & \textbf{33.8} & \textbf{47.2} & -- & -- & -- & 65.0 & 46.5 & -- \\
+Oracle variant sets & 63.2 & 62.4 & 63.5 & 44.9 & 40.1 & 46.8 & 59.7 & 57.3 & 60.6 & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}
