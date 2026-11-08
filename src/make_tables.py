@@ -196,7 +196,7 @@ def robust_table():
         un = [fmt(ss[m]['EX_unaff']) if ss[m] else '--' for m in ('fuzzy', 'ours_v4')]
         out.append(f'{lab} & {n} & ' + ' & '.join(cells) + ' & ' + ' & '.join(un) + ' \\\\')
     tex = ['\\begin{table}[t]', '\\centering',
-           '\\caption{Robustness with gold SQL (no generator errors) on held-out seed 4: EX (\\%) on the affected '
+           '\\caption{Robustness with gold SQL (no generator errors) on seed 4: EX (\\%) on the affected '
            'questions per variant type, and EX on the unaffected questions for Fuzzy and \\sys{}.}',
            '\\label{tab:robust}', '\\small', '\\setlength{\\tabcolsep}{2.6pt}', '\\resizebox{\\columnwidth}{!}{%',
            '\\begin{tabular}{lrrrrrrrr}', '\\toprule',
@@ -226,7 +226,7 @@ def multiseed_table(roots=('main_r20_s2', 'main_r20_s3', 'main_r20_s4')):
         if m in ('fuzzy', 'ours_v4'):
             out.append('\\midrule')
     tex = ['\\begin{table*}[t]', '\\centering',
-           '\\caption{EX (\\%) on \\bench{} ($r=0.2$), mean $\\pm$ standard deviation over the three held-out seeds (2, 3, 4).}',
+           '\\caption{EX (\\%) on \\bench{} ($r=0.2$), mean $\\pm$ standard deviation over seeds 2, 3 and 4.}',
            '\\label{tab:seeds}', '\\small', '\\begin{tabular}{lrrrrr}', '\\toprule',
            'Method & ' + ' & '.join(TAGNAME.get(t, 'Llama-3.1-8B') for t in tags) + '\\\\', '\\midrule'] + out + \
           ['\\bottomrule', '\\end{tabular}', '\\end{table*}']
@@ -237,7 +237,7 @@ if __name__ == '__main__':
     multiseed_table()
     robust_table()
     main_table(['main_r20_s3'], ['omni7b', 'qwen7b', 'qwen32'], 'clean', 'main.tex',
-               'Execution accuracy (\\%) on \\bench{} (held-out seed 3, $r=0.2$) under clean-answer semantics: all 1{,}534 '
+               'Execution accuracy (\\%) on \\bench{} (seed 3, $r=0.2$) under clean-answer semantics: all 1{,}534 '
                'questions (EX), the 426 affected questions (Aff.) and the unaffected ones (Unaff.). Clean EX: the same method '
                'on the original BIRD databases. Bold: best non-oracle. --: not run.',
                'tab:main')
